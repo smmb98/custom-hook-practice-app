@@ -8,12 +8,12 @@ function App() {
   const [error, setError] = useState(null);
   const [tasks, setTasks] = useState([]);
 
-  const fetchTasks = async (taskText) => {
+  const fetchTasks = async () => {
     setIsLoading(true);
     setError(null);
     try {
       const response = await fetch(
-        "https://react-customhook-practice-default-rtdb.asia-southeast1.firebasedatabase.app/"
+        "https://react-customhook-practice-default-rtdb.asia-southeast1.firebasedatabase.app/tasks.json"
       );
 
       if (!response.ok) {
